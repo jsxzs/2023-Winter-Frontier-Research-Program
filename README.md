@@ -17,6 +17,7 @@ Architecture of my model:
 10. Fully-connected layer (with bias) to compute scores for 10 classes
 
 Training and validation accuracy:
+
 ![](images/train.png)
 
 Test: 99.15%
@@ -28,9 +29,11 @@ Test: 99.15%
 - Estimated aleatoric and epistemic uncertainty in my model and its predictions.
   ![uncertainty](images/uncertainty.png)
   **Key Idea**: Do dropout at both training and testing time. At test time, repeat prediction a few hundreds times with random dropout. The variance of predictions gives the episdemic uncertainty of the model.
+  <br>
   **Reference**: [Uncertainty in Deep Learning. How To Measure?](https://towardsdatascience.com/my-deep-learning-model-says-sorry-i-dont-know-the-answer-that-s-absolutely-ok-50ffa562cb0b)
 
   After adding dropout layers: **Bayesian U-Net**
+  
   ![bayesian_unet](images/bayesian_unet.png)
 
   **Results**
